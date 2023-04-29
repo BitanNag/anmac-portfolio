@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-section">
+    <div class="hero-section" id="home-section">
 
         <!-- title section starts -->
         <!-- <div class="title">
@@ -15,19 +15,24 @@
         <nav class="nav-bar">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/">Home</router-link>
+                    <!-- <router-link class="nav-link" to="/">Home</router-link> -->
+                    <button @click="scrollToElement('#home-section')">Home</button>
                 </li>  
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/about">About</router-link>
+                    <!-- <router-link class="nav-link" to="/about">About</router-link> -->
+                    <button @click="scrollToElement('#about-section')">About</button>
                 </li>  
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/products">Products</router-link>
+                    <!-- <router-link class="nav-link" to="/products">Products</router-link> -->
+                    <button @click="scrollToElement('#products-section')">Products</button>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <router-link class="nav-link" to="/testimonial">Testimonial</router-link>
-                </li>
+                    <button>Testimonial</button>
+                </li> -->
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/contactUs">Contact</router-link>
+                    <!-- <router-link class="nav-link" to="/contactUs">Contact</router-link> -->
+                    <button @click="scrollToElement('#contact-section')">Contact</button>
                 </li>
             </ul>
         </nav>   
@@ -36,14 +41,37 @@
 </template>
 
 <script>
-
-    import CarouselComponent from './carousel/CarouselComponent.vue'
+    import  VueScrollTo from 'vue-scrollto';
+    import CarouselComponent from './carousel/CarouselComponent.vue';
 
     export default {
         name: 'HeroArea',
 
 
         components: { CarouselComponent },
+
+
+        methods: {
+            scrollToElement(element) {
+                VueScrollTo.scrollTo(element, 500, {
+                    easing: 'ease-in-out',
+                    offset: -100,
+                    force: false,
+                    cancelable: true,
+                    onStart: function () {
+                        console.log('Scroll started');
+                    },
+                    onDone: function () {
+                        console.log('Scroll finished');
+                    },
+                    onCancel: function () {
+                        console.log('Scroll canceled');
+                    },
+                    x: false,
+                    y: true
+                });
+            }
+        }
     }
 
 </script>
@@ -96,19 +124,28 @@
         background-color: #252525;
         list-style-type: none;
         border-radius: 10px;
+        gap: 30px;
     }
 
     .hero-section .nav-bar .nav-list .nav-item {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 0;
-        border-radius: 10px;
+    }
+
+    .hero-section .nav-bar .nav-list .nav-item button {
+        background: transparent;
+        outline: none;
+        border: none;
+        padding: 10px;
+        width: 100px;
         color: white;
+        font-size: 16px;
+        border-radius: 10px;
         cursor: pointer;
     }
 
-    .hero-section .nav-bar .nav-list .nav-item:hover {
+    .hero-section .nav-bar .nav-list .nav-item button:hover {
         background-color: lightgray;
         color: black;
     }

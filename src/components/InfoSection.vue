@@ -30,11 +30,15 @@
             </div>
 
             <div class="column page-links">
-                <router-link class="link" to="/">Home</router-link>
+                <!-- <router-link class="link" to="/">Home</router-link>
                 <router-link class="link" to="/about">About</router-link>
                 <router-link class="link" to="/products">Our Products</router-link>
                 <router-link class="link" to="/testimonial">Testimonial</router-link>
-                <router-link class="link" to="/contactUs">Contact Us</router-link>
+                <router-link class="link" to="/contactUs">Contact Us</router-link> -->
+                <button @click="scrollToElement('#home-section')" >Home</button>
+                <button @click="scrollToElement('#about-section')">About Us</button>
+                <button @click="scrollToElement('#products-section')">Our Products</button>
+                <button @click="scrollToElement('#contact-section')">Contact Us</button>
             </div>
         </div>
 
@@ -45,8 +49,32 @@
 
 
 <script>
+import  VueScrollTo from 'vue-scrollto';
 export default {
-    name: 'InfoSection'
+    name: 'InfoSection',
+
+
+    methods: {
+        scrollToElement(element) {
+            VueScrollTo.scrollTo(element, 500, {
+                easing: 'ease-in-out',
+                offset: -100,
+                force: false,
+                cancelable: true,
+                onStart: function () {
+                    console.log('Scroll started');
+                },
+                onDone: function () {
+                    console.log('Scroll finished');
+                },
+                onCancel: function () {
+                    console.log('Scroll canceled');
+                },
+                x: false,
+                y: true
+            });
+        }
+    }
 }
 </script>
 
@@ -135,17 +163,22 @@ export default {
     }
 
     .info-section .contact-info .column.page-links {
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
+        gap: 25px;
     }
 
-    .info-section .contact-info .column.page-links > a {
-        position: relative;
-        transform: translateX(150px);
-        margin: 20px 0;
-        color: white;
-        text-decoration: none;
+    .info-section .contact-info .column.page-links > button {
+       background: transparent;
+       border: none;
+       outline: none;
+       width: 120px;
+       border-radius: 10px;
+       color: white;
+       font-size: 16px;
+       cursor: pointer;
     }
 
 

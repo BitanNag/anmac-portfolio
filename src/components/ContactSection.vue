@@ -1,6 +1,6 @@
-<template>
+`<template>
 
-    <div class="contact-section">
+    <div class="contact-section" id="contact-section">
 
         <div class="title">
             <div class="title-container">

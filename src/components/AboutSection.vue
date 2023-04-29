@@ -1,7 +1,7 @@
 <template>
       <!-- about section -->
 
-    <section class="about-section">
+    <section class="about-section" id="about-section">
             <div class="img-box">
                 <img src="../assets/images/about-img.jpg" alt="">
             </div>
@@ -11,7 +11,7 @@
                 <h2>About our Business</h2>
                 </div>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-                <a href="">Read More</a>
+                <!-- <a href="">Read More</a> -->
             </div>
     </section>
 

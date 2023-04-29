@@ -23,19 +23,23 @@ export default createStore({
 				id: 1,
 				name: 'Eggs',
 				description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?',
-				image: 'eggs-img-1.jpg'
+				image: 'eggs-img-1.jpg',
+				variety: ["ABCD", "EFGH", "IJKL"]
+
 			},
 			{
 				id: 2,
 				name: 'Rice',
 				description: 'efgh',
-				image: 'rice-img-1.jpg'
+				image: 'rice-img-1.jpg',
+				variety: []
 			},
 			{
 				id: 3,
 				name: 'Coffee',
 				description: 'ijkl',
-				image: 'coffee-img-1.jpg'
+				image: 'coffee-img-1.jpg',
+				variety: []
 			},
 		],
 		clients: [

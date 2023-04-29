@@ -1,6 +1,6 @@
 <template>
 
-	<div class="products-section">
+	<div class="products-section" id="products-section">
 
 		<div class="title-container">
 			<hr>
@@ -12,8 +12,13 @@
 				<img :src="require(`../assets/images/products/${item.image}`)" alt="">
 				<div class="box-overlay">
 					<h5>{{item.name}}</h5>
-					<p>{{item.description}}</p>
-					<a href="">Buy Now</a>
+					<span>
+						<p>{{item.description}}</p>
+						<ul class="item-variety" v-if="item.variety.length > 0">
+							<li v-for="element in item.variety" :key="element">{{ element }}</li>
+						</ul>
+					</span>
+					<button @click="scrollToElement('#contact-section')">Buy Now</button>
 				</div>
 			</div>
 		</div>
@@ -25,53 +30,31 @@
 
 
 <script>
-
+	import  VueScrollTo from 'vue-scrollto';
 	export default {
 		name: 'ProductsSection',
-		
-		
-		data() {
-			return {
-				portfolio: [
-					{
-						id: 1,
-						name: 'Orange',
-						description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?',
-						image: 'f-1.jpg'
-					},
-					{
-						id: 2,
-						name: 'Blueberry',
-						description: 'efgh',
-						image: 'f-2.jpg'
-					},
-					{
-						id: 3,
-						name: 'Banana',
-						description: 'ijkl',
-						image: 'f-3.jpg'
-					},
-					{
-						id: 4,
-						name: 'Apple',
-						description: 'mnop',
-						image: 'f-4.jpg'
-					},
-					{
-						id: 5,
-						name: 'Mango',
-						description: 'qrst',
-						image: 'f-5.jpg'
-					},
-					{
-						id: 6,
-						name: 'Strawberry',
-						description: 'uvwx',
-						image: 'f-6.jpg'
-					},
-				]
-			}
-		},
+
+		methods: {
+			scrollToElement(element) {
+                VueScrollTo.scrollTo(element, 500, {
+                    easing: 'ease-in-out',
+                    offset: -100,
+                    force: false,
+                    cancelable: true,
+                    onStart: function () {
+                        console.log('Scroll started');
+                    },
+                    onDone: function () {
+                        console.log('Scroll finished');
+                    },
+                    onCancel: function () {
+                        console.log('Scroll canceled');
+                    },
+                    x: false,
+                    y: true
+                });
+            }
+		}
 	}
 
 </script>
@@ -137,6 +120,7 @@
 		align-items: center;
 		justify-content: center;
 		transition: all 0.3s;
+		padding: 20px;
 	}
 
 	.products-section .products-container .product-box .box-overlay h5 {
@@ -144,20 +128,37 @@
 		margin-bottom: 25px;
 	}
 
-	.products-section .products-container .product-box .box-overlay p {
-		/* text-transform: uppercase; */
-		padding: 15px;
-		margin-bottom: 25px;
-		text-align: center;
+	.products-section .products-container .product-box .box-overlay span {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		width: 100%;
+		height: fit-content;
+		/* padding: 15px; */
+		margin-bottom: 25px;	
+		gap: 20px;
 	}
 
-	.products-section .products-container .product-box .box-overlay a {
+	.products-section .products-container .product-box .box-overlay span > p {
+		width: 100%;
+		text-align: left;
+	}
+
+	.products-section .products-container .product-box .box-overlay span .item-variety li {
+		margin-left: 15px;
+	}
+
+	.products-section .products-container .product-box .box-overlay button {
 		display: inline-block;
+		background: transparent;
 		padding: 7px 35px;
 		border: 1px solid #ffffff;
 		color: #ffffff;
 		font-size: 15px;
 		text-decoration: none;
+		margin-top: 30px;
+		cursor: pointer;
 	}
 
 	.products-section .products-container .product-box .box-overlay a:hover {

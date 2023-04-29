@@ -15,14 +15,6 @@
 						There are many variations of passages of Lorem Ipsum available
 					</p>
 					</div>
-					<!-- <div class="img-box">
-					<img src="../assets/images/shop-img.jpg" alt="">
-					</div>
-					<div class="btn-box">
-					<a href="">
-						Buy Now
-					</a>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -30,8 +22,6 @@
 		<About />
 
 		<Products />
-
-		<Clients />
 
 		<ContactForm />
 
@@ -46,7 +36,6 @@
 	import Hero from '../components/HeroSection.vue';
 	import About from '../components/AboutSection.vue';
 	import Products from '../components/ProductsSection.vue';
-	import Clients from '../components/ClientsSection.vue';
 	import ContactForm from '../components/ContactSection.vue';
 	import Info from '../components/InfoSection.vue';
 	import Footer from '../components/FooterSection.vue'
@@ -59,7 +48,6 @@
 			Hero,
 			About,
 			Products,
-			Clients,
 			ContactForm,
 			Info,
 			Footer
@@ -69,25 +57,6 @@
 </script>
 
 <style>
-	/* @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&display=swap');
-
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Poppins', sans-serif;
-	}
-
-	body {
-		overflow: overlay;
-	}
-
-	#app {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	} */
-
 	/* styling for display section starts */
 	.display-section {
 		padding: 30px 0;
