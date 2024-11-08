@@ -1,76 +1,385 @@
-import { createStore } from 'vuex'
-
-
+import { createStore } from "vuex";
 
 export default createStore({
 	state: {
 		heroDisplay: [
 			{
 				id: 1,
-				picture: 'slider-img-coffee.jpg'
+				picture: "slider-img-rice.jpg",
 			},
 			{
 				id: 2,
-				picture: 'slider-img-eggs.jpg'
+				picture: "slider-img-spices.jpg",
 			},
 			{
 				id: 3,
-				picture: 'slider-img-rice.jpg'
+				picture: "slider-img-millets.jpg",
+			},
+		],
+		productsPortfolio: [
+			{
+				id: 1,
+				name: "Millets",
+				description: "",
+				image: "Millets_01.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 2,
+				name: "Millets",
+				description: "",
+				image: "Millets_02.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 3,
+				name: "Millets",
+				description: "",
+				image: "Millets_03.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 4,
+				name: "Millets",
+				description: "",
+				image: "Millets_04.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 5,
+				name: "Millets",
+				description: "",
+				image: "Millets_05.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 6,
+				name: "Millets",
+				description: "",
+				image: "Millets_06.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 7,
+				name: "Millets",
+				description: "",
+				image: "Millets_07.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 8,
+				name: "Millets",
+				description: "",
+				image: "Millets_08.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 9,
+				name: "Millets",
+				description: "",
+				image: "Millets_09.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 10,
+				name: "Millets",
+				description: "",
+				image: "Millets_10.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 11,
+				name: "Millets",
+				description: "",
+				image: "Millets_11.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 12,
+				name: "Millets",
+				description: "",
+				image: "Millets_12.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 13,
+				name: "Millets",
+				description: "",
+				image: "Millets_13.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 14,
+				name: "Millets",
+				description: "",
+				image: "Millets_14.jpg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 15,
+				name: "Rice",
+				description: "",
+				image: "Rice_01.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 16,
+				name: "Rice",
+				description: "",
+				image: "Rice_02.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 17,
+				name: "Rice",
+				description: "",
+				image: "Rice_03.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 18,
+				name: "Rice",
+				description: "",
+				image: "Rice_04.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 19,
+				name: "Rice",
+				description: "",
+				image: "Rice_05.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 20,
+				name: "Rice",
+				description: "",
+				image: "Rice_06.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 21,
+				name: "Rice",
+				description: "",
+				image: "Rice_07.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 22,
+				name: "Rice",
+				description: "",
+				image: "Rice_08.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 23,
+				name: "Rice",
+				description: "",
+				image: "Rice_09.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 24,
+				name: "Rice",
+				description: "",
+				image: "Rice_10.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 25,
+				name: "Rice",
+				description: "",
+				image: "Rice_11.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 26,
+				name: "Rice",
+				description: "",
+				image: "Rice_12.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 27,
+				name: "Rice",
+				description: "",
+				image: "Rice_13.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 28,
+				name: "Rice",
+				description: "",
+				image: "Rice_14.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 29,
+				name: "Rice",
+				description: "",
+				image: "Rice_15.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 30,
+				name: "Rice",
+				description: "",
+				image: "Rice_16.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 31,
+				name: "Rice",
+				description: "",
+				image: "Rice_17.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 32,
+				name: "Rice",
+				description: "",
+				image: "Rice_18.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 33,
+				name: "Rice",
+				description: "",
+				image: "Rice_19.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 34,
+				name: "Rice",
+				description: "",
+				image: "Rice_20.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 35,
+				name: "Rice",
+				description: "",
+				image: "Rice_21.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 36,
+				name: "Rice",
+				description: "",
+				image: "Rice_22.jpeg",
+				variety: [],
+				buttonName: null,
+			},
+			{
+				id: 37,
+				name: "Rice",
+				description: "",
+				image: "Rice_23.jpeg",
+				variety: [],
+				buttonName: null,
 			},
 		],
 		portfolio: [
 			{
 				id: 1,
-				name: 'Eggs',
-				description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, repellat ipsum facere voluptate dicta obcaecati deserunt nobis suscipit eaque?',
-				image: 'eggs-img-1.jpg',
-				variety: ["ABCD", "EFGH", "IJKL"]
-
+				name: "Rice",
+				description:
+					"We supply premium quality rice. Our portfolio is as follows:",
+				image: "rice-img-1.jpg",
+				variety: [
+					"All varieties of Basmati (1121, 1401, 1509, etc)",
+					"IR-64 raw and parboiled",
+					"Sona Masuri",
+					"Others",
+				],
+				buttonName: "Buy Now",
 			},
 			{
 				id: 2,
-				name: 'Rice',
-				description: 'efgh',
-				image: 'rice-img-1.jpg',
-				variety: []
+				name: "Spices",
+				description:
+					"We deal and export every spice available in India, of premium and export quality.",
+				image: "spices-img-1.jpg",
+				variety: ["Black Pepper", "Cardamom"],
+				buttonName: "Contact Us",
 			},
 			{
 				id: 3,
-				name: 'Coffee',
-				description: 'ijkl',
-				image: 'coffee-img-1.jpg',
-				variety: []
+				name: "Millets",
+				description: "We deal in 3 major variants of Millets: ",
+				image: "millets-img-1.jpg",
+				variety: [
+					"Bajra / Pearl Millets",
+					"Jowar / Sorghum Millets",
+					"Ragi / Finger Millets",
+				],
+				buttonName: "Contact Us",
 			},
 		],
 		clients: [
 			{
-				picture: 'client1.jpg',
-				name: 'Anirban Hazra',
-				testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse'
+				picture: "client1.jpg",
+				name: "Anirban Hazra",
+				testimonial:
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
 			},
 			{
-				picture: 'client2.jpg',
-				name: 'Aritra Banerjee',
-				testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse'
+				picture: "client2.jpg",
+				name: "Aritra Banerjee",
+				testimonial:
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
 			},
 			{
-				picture: 'client3.jpg',
-				name: 'Subhadeep Datta',
-				testimonial: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse'
+				picture: "client3.jpg",
+				name: "Subhadeep Datta",
+				testimonial:
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
 			},
 		],
-		mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.791965926584!2d88.3355280508284!3d22.773100431246387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89b8d5d9f488f%3A0xe024e1517f9196ac!2sBong%20Bawarchi!5e0!3m2!1sen!2sin!4v1673199321435!5m2!1sen!2sin',
+		mapLink:
+			"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.791965926584!2d88.3355280508284!3d22.773100431246387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89b8d5d9f488f%3A0xe024e1517f9196ac!2sBong%20Bawarchi!5e0!3m2!1sen!2sin!4v1673199321435!5m2!1sen!2sin",
 	},
-
 
 	getters: {},
 
-
 	mutations: {},
-
 
 	actions: {},
 
-
-	modules: {}
-})
+	modules: {},
+});

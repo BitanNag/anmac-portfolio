@@ -84,7 +84,7 @@
                     try {
                         this.currentDate = new Date().toLocaleString('en-IN');
                         axios.defaults.headers.post['Content-Type'] = 'application/json';
-                        const result = await axios.post('https://formsubmit.co/ajax/c655ad754c2a66d716e28b08d04d5f7d', {
+                        const result = await axios.post('https://formsubmit.co/ajax/anmacexports@gmail.com', {
                             name: this.name,
                             email: this.email,
                             phone: this.phoneNumber,

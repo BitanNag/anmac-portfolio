@@ -1,65 +1,80 @@
 <template>
-
 	<div class="products-section" id="products-section">
-
 		<div class="title-container">
-			<hr>
-			<h2> Our Products </h2>
+			<hr />
+			<h2>Our Products</h2>
 		</div>
 
 		<div class="products-container">
-			<div class="product-box" v-for="item in $store.state.portfolio" :key="item.id">
-				<img :src="require(`../assets/images/products/${item.image}`)" alt="">
+			<div class="product-box" v-for="item in portfolio" :key="item.id">
+				<img :src="require(`../assets/images/products/${item.image}`)" alt="" />
 				<div class="box-overlay">
-					<h5>{{item.name}}</h5>
+					<h5>{{ item.name }}</h5>
 					<span>
-						<p>{{item.description}}</p>
+						<p>{{ item.description }}</p>
 						<ul class="item-variety" v-if="item.variety.length > 0">
-							<li v-for="element in item.variety" :key="element">{{ element }}</li>
+							<li v-for="element in item.variety" :key="element">
+								{{ element }}
+							</li>
 						</ul>
 					</span>
-					<button @click="scrollToElement('#contact-section')">Buy Now</button>
+					<button
+						v-if="item.buttonName"
+						@click="scrollToElement('#contact-section')"
+					>
+						{{ item.buttonName }}
+					</button>
 				</div>
 			</div>
 		</div>
-
 	</div>
-
 </template>
 
-
-
 <script>
-	import  VueScrollTo from 'vue-scrollto';
+	import VueScrollTo from "vue-scrollto";
 	export default {
-		name: 'ProductsSection',
+		name: "ProductsSection",
+
+		props: {
+			isProductsSection: {
+				type: Boolean,
+				default: false,
+			},
+		},
+
+		computed: {
+			portfolio() {
+				console.log(this.isProductsSection);
+
+				return this.isProductsSection
+					? this.$store.state.portfolio
+					: this.$store.state.productsPortfolio;
+			},
+		},
 
 		methods: {
 			scrollToElement(element) {
-                VueScrollTo.scrollTo(element, 500, {
-                    easing: 'ease-in-out',
-                    offset: -100,
-                    force: false,
-                    cancelable: true,
-                    onStart: function () {
-                        console.log('Scroll started');
-                    },
-                    onDone: function () {
-                        console.log('Scroll finished');
-                    },
-                    onCancel: function () {
-                        console.log('Scroll canceled');
-                    },
-                    x: false,
-                    y: true
-                });
-            }
-		}
-	}
-
+				VueScrollTo.scrollTo(element, 500, {
+					easing: "ease-in-out",
+					offset: -100,
+					force: false,
+					cancelable: true,
+					onStart: function () {
+						console.log("Scroll started");
+					},
+					onDone: function () {
+						console.log("Scroll finished");
+					},
+					onCancel: function () {
+						console.log("Scroll canceled");
+					},
+					x: false,
+					y: true,
+				});
+			},
+		},
+	};
 </script>
-
-
 
 <style scoped>
 	.products-section {
@@ -97,6 +112,7 @@
 
 	.products-section .products-container .product-box {
 		flex: 0 0 31.33%;
+		height: 550px;
 		margin: 1%;
 		position: relative;
 		overflow: hidden;
@@ -104,6 +120,7 @@
 
 	.products-section .products-container .product-box img {
 		width: 100%;
+		height: 100%;
 	}
 
 	.products-section .products-container .product-box .box-overlay {
@@ -136,7 +153,7 @@
 		width: 100%;
 		height: fit-content;
 		/* padding: 15px; */
-		margin-bottom: 25px;	
+		margin-bottom: 25px;
 		gap: 20px;
 	}
 
@@ -145,7 +162,13 @@
 		text-align: left;
 	}
 
-	.products-section .products-container .product-box .box-overlay span .item-variety li {
+	.products-section
+		.products-container
+		.product-box
+		.box-overlay
+		span
+		.item-variety
+		li {
 		margin-left: 15px;
 	}
 
@@ -161,7 +184,7 @@
 		cursor: pointer;
 	}
 
-	.products-section .products-container .product-box .box-overlay a:hover {
+	.products-section .products-container .product-box .box-overlay button:hover {
 		background-color: #ffffff;
 		color: #000000;
 	}
@@ -169,8 +192,7 @@
 	.products-section .products-container .product-box:hover .box-overlay {
 		top: 0;
 		opacity: 0.9;
-	}	
-
+	}
 
 	@media (max-width: 992px) {
 		.products-section .products-container .product-box {

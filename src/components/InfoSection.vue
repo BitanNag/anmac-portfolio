@@ -25,7 +25,7 @@
             <div class="column social-links">
                 <a class="link" href=""><img src="../assets/images/social-links/facebook-logo.png" alt=""><span>&nbsp;&nbsp;Facebook</span></a>
                 <a class="link" href=""><img src="../assets/images/social-links/instagram-logo.png" alt=""><span>&nbsp;&nbsp;Instagram</span></a>
-                <a class="link" href=""><img src="../assets/images/social-links/linkedin-logo.png" alt=""><span>&nbsp;&nbsp;LinkedIn</span></a>
+                <a class="link" href="https://www.linkedin.com/in/anmac-exports-a85b96248"><img src="../assets/images/social-links/linkedin-logo.png" alt=""><span>&nbsp;&nbsp;LinkedIn</span></a>
                 <!-- <a class="link" href=""><img src="../assets/images/social-links/twitter-logo.png" alt=""><span>&nbsp;&nbsp;Twitter</span></a> -->
             </div>
 
@@ -49,7 +49,7 @@
 
 
 <script>
-import  VueScrollTo from 'vue-scrollto';
+import VueScrollTo from 'vue-scrollto';
 export default {
     name: 'InfoSection',
 

@@ -1,5 +1,4 @@
 <template>
-	
 	<div class="main-container">
 		<!-- ***** Home Page ***** -->
 		<Hero />
@@ -8,12 +7,8 @@
 			<div class="container">
 				<div class="box">
 					<div class="detail-box">
-					<h2>
-						Anmac Exports
-					</h2>
-					<p>
-						There are many variations of passages of Lorem Ipsum available
-					</p>
+						<h2>Anmac Exports</h2>
+						<p>Member of FIEO (Federation of Indian Exporters Organisation)</p>
 					</div>
 				</div>
 			</div>
@@ -21,28 +16,26 @@
 
 		<About />
 
-		<Products />
+		<Products :isProductsSection="true" />
 
 		<ContactForm />
 
 		<Info />
 
 		<Footer />
-
 	</div>
 </template>
 
 <script>
-	import Hero from '../components/HeroSection.vue';
-	import About from '../components/AboutSection.vue';
-	import Products from '../components/ProductsSection.vue';
-	import ContactForm from '../components/ContactSection.vue';
-	import Info from '../components/InfoSection.vue';
-	import Footer from '../components/FooterSection.vue'
+	import Hero from "../components/HeroSection.vue";
+	import About from "../components/AboutSection.vue";
+	import Products from "../components/ProductsSection.vue";
+	import ContactForm from "../components/ContactSection.vue";
+	import Info from "../components/InfoSection.vue";
+	import Footer from "../components/FooterSection.vue";
 
 	export default {
-		name: 'App',
-
+		name: "App",
 
 		components: {
 			Hero,
@@ -50,13 +43,12 @@
 			Products,
 			ContactForm,
 			Info,
-			Footer
-		}
-
-	}
+			Footer,
+		},
+	};
 </script>
 
-<style>
+<style scoped>
 	/* styling for display section starts */
 	.display-section {
 		padding: 30px 0;
@@ -109,7 +101,6 @@
 		color: #313131;
 	}
 
-
 	@media (max-width: 992px) {
 		.display-section {
 			margin-top: 115px;
@@ -126,11 +117,10 @@
 	::-webkit-scrollbar-track {
 		background: transparent;
 	}
-	
+
 	::-webkit-scrollbar-thumb {
 		background: #fd9e2e;
-		border-radius: 10px; 
+		border-radius: 10px;
 	}
 	/* styling for scrollbar */
-	
 </style>
