@@ -5,7 +5,7 @@
 			<h2>Our Products</h2>
 		</div>
 
-		<div class="products-container">
+		<div class="products-container" v-if="isProductsSection">
 			<div class="product-box" v-for="item in portfolio" :key="item.id">
 				<img :src="require(`../assets/images/products/${item.image}`)" alt="" />
 				<div class="box-overlay">
@@ -27,11 +27,49 @@
 				</div>
 			</div>
 		</div>
+		<div class="slider-container" v-else>
+			<div class="card-wrapper">
+				<div class="list-wrapper">
+					<h2 class="card-title">Rice Varieties</h2>
+
+					<ul class="card-list">
+						<li class="card-item" v-for="item in ricePortfolio" :key="item">
+							<a href="#" class="card-link">
+								<img
+									:src="require(`../assets/images/products/${item.image}`)"
+									alt=""
+									class="card-image"
+								/>
+								<p class="badge rice">Rice</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="list-wrapper">
+					<h2 class="card-title">Millet Varieties</h2>
+
+					<ul class="card-list">
+						<li class="card-item" v-for="item in milletsPortfolio" :key="item">
+							<a href="#" class="card-link">
+								<img
+									:src="require(`../assets/images/products/${item.image}`)"
+									alt=""
+									class="card-image"
+								/>
+								<p class="badge millets">Millets</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 	import VueScrollTo from "vue-scrollto";
+
 	export default {
 		name: "ProductsSection",
 
@@ -44,11 +82,13 @@
 
 		computed: {
 			portfolio() {
-				console.log(this.isProductsSection);
-
-				return this.isProductsSection
-					? this.$store.state.portfolio
-					: this.$store.state.productsPortfolio;
+				return this.$store.state.portfolio;
+			},
+			ricePortfolio() {
+				return this.$store.state.ricePortfolio;
+			},
+			milletsPortfolio() {
+				return this.$store.state.milletsPortfolio;
 			},
 		},
 
@@ -199,5 +239,92 @@
 			flex: 0 0 90%;
 			margin: 1.5%;
 		}
+	}
+
+	.products-section .slider-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.card-wrapper,
+	.list-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.list-wrapper {
+		margin: 30px;
+		border: 3px solid saddlebrown;
+		border-radius: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.card-list {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		padding: 20px;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.card-list .card-item {
+		list-style: none;
+	}
+
+	.card-list .card-item .card-link {
+		width: 400px;
+		display: block;
+		background: lightyellow;
+		padding: 20px;
+		border: 2px solid transparent;
+		border-radius: 12px;
+		text-decoration: none;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+		transition: 0.2s ease;
+	}
+
+	.card-list .card-item .card-link:hover {
+		border-color: #5372f0;
+	}
+
+	.card-list .card-link .card-image {
+		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+
+	.card-list .card-link .badge {
+		color: #5372f0;
+		padding: 8px 16px;
+		margin: 16px 0 18px;
+		font-size: 0.95rem;
+		font-weight: 500;
+		background-color: #dde4ff;
+		width: fit-content;
+		border-radius: 50px;
+	}
+
+	.card-list .card-link .badge.rice {
+		color: #b25a2b;
+		background-color: #ffe3d2;
+	}
+
+	.card-list .card-link .badge.millets {
+		color: #205c20;
+		background-color: #d6f8d6;
+	}
+
+	.card-list .card-link .card-title {
+		font-size: 1.19rem;
+		font-weight: 600;
+		color: black;
 	}
 </style>

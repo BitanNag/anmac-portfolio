@@ -16,7 +16,7 @@ export default createStore({
 				picture: "slider-img-millets.jpg",
 			},
 		],
-		productsPortfolio: [
+		milletsPortfolio: [
 			{
 				id: 1,
 				name: "Millets",
@@ -129,8 +129,10 @@ export default createStore({
 				variety: [],
 				buttonName: null,
 			},
+		],
+		ricePortfolio: [
 			{
-				id: 15,
+				id: 1,
 				name: "Rice",
 				description: "",
 				image: "Rice_01.jpeg",
@@ -138,7 +140,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 16,
+				id: 2,
 				name: "Rice",
 				description: "",
 				image: "Rice_02.jpeg",
@@ -146,7 +148,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 17,
+				id: 3,
 				name: "Rice",
 				description: "",
 				image: "Rice_03.jpeg",
@@ -154,7 +156,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 18,
+				id: 4,
 				name: "Rice",
 				description: "",
 				image: "Rice_04.jpeg",
@@ -162,7 +164,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 19,
+				id: 5,
 				name: "Rice",
 				description: "",
 				image: "Rice_05.jpeg",
@@ -170,7 +172,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 20,
+				id: 6,
 				name: "Rice",
 				description: "",
 				image: "Rice_06.jpeg",
@@ -178,7 +180,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 21,
+				id: 7,
 				name: "Rice",
 				description: "",
 				image: "Rice_07.jpeg",
@@ -186,7 +188,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 22,
+				id: 8,
 				name: "Rice",
 				description: "",
 				image: "Rice_08.jpeg",
@@ -194,7 +196,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 23,
+				id: 9,
 				name: "Rice",
 				description: "",
 				image: "Rice_09.jpeg",
@@ -202,7 +204,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 24,
+				id: 10,
 				name: "Rice",
 				description: "",
 				image: "Rice_10.jpeg",
@@ -210,7 +212,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 25,
+				id: 11,
 				name: "Rice",
 				description: "",
 				image: "Rice_11.jpeg",
@@ -218,7 +220,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 26,
+				id: 12,
 				name: "Rice",
 				description: "",
 				image: "Rice_12.jpeg",
@@ -226,7 +228,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 27,
+				id: 13,
 				name: "Rice",
 				description: "",
 				image: "Rice_13.jpeg",
@@ -234,7 +236,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 28,
+				id: 14,
 				name: "Rice",
 				description: "",
 				image: "Rice_14.jpeg",
@@ -242,7 +244,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 29,
+				id: 15,
 				name: "Rice",
 				description: "",
 				image: "Rice_15.jpeg",
@@ -250,7 +252,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 30,
+				id: 16,
 				name: "Rice",
 				description: "",
 				image: "Rice_16.jpeg",
@@ -258,7 +260,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 31,
+				id: 17,
 				name: "Rice",
 				description: "",
 				image: "Rice_17.jpeg",
@@ -266,7 +268,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 32,
+				id: 18,
 				name: "Rice",
 				description: "",
 				image: "Rice_18.jpeg",
@@ -274,7 +276,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 33,
+				id: 19,
 				name: "Rice",
 				description: "",
 				image: "Rice_19.jpeg",
@@ -282,7 +284,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 34,
+				id: 20,
 				name: "Rice",
 				description: "",
 				image: "Rice_20.jpeg",
@@ -290,7 +292,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 35,
+				id: 21,
 				name: "Rice",
 				description: "",
 				image: "Rice_21.jpeg",
@@ -298,7 +300,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 36,
+				id: 22,
 				name: "Rice",
 				description: "",
 				image: "Rice_22.jpeg",
@@ -306,7 +308,7 @@ export default createStore({
 				buttonName: null,
 			},
 			{
-				id: 37,
+				id: 23,
 				name: "Rice",
 				description: "",
 				image: "Rice_23.jpeg",
@@ -314,6 +316,7 @@ export default createStore({
 				buttonName: null,
 			},
 		],
+		productsPortfolio: [],
 		portfolio: [
 			{
 				id: 1,
